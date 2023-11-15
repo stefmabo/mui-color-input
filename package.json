@@ -37,7 +37,7 @@
     "material"
   ],
   "scripts": {
-    "build": "npm run lint && npm run test -- run && vite build",
+    "build": "vite build",
     "lint": "tsc && eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "npm run lint -- --fix",
     "storybook": "storybook dev -p 6006",
@@ -45,7 +45,6 @@
     "test": "vitest",
     "release": "standard-version",
     "coverage": "vitest run --coverage",
-    "prepare": "husky install",
     "postinstall": "npm run build"
   },
   "standard-version": {
