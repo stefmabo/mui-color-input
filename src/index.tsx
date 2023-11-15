@@ -111,7 +111,7 @@ const MuiColorInput = React.forwardRef(
     ) => {
       onClose?.(...args)
       setAnchorEl(null)
-      
+
       if (isFocusedOnPopoverClose) {
         queueMicrotask(() => {
           inputRef.current?.focus()
