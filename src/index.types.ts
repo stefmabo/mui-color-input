@@ -41,4 +41,5 @@ export interface MuiColorInputProps extends TextFieldProps {
   isAlphaHidden?: boolean
   onChange?: (value: string, colors: MuiColorInputColors) => void
   PopoverProps?: PopoverProps
+  isFocusedOnPopoverClose?: boolean
 }

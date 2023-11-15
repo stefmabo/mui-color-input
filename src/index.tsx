@@ -46,6 +46,7 @@ const MuiColorInput = React.forwardRef(
       fallbackValue,
       isAlphaHidden,
       disablePopover,
+      isFocusedOnPopoverClose = true,
       ...restProps
     } = props
     const { onBlur, InputProps, ...restTextFieldProps } = restProps
@@ -110,9 +111,12 @@ const MuiColorInput = React.forwardRef(
     ) => {
       onClose?.(...args)
       setAnchorEl(null)
-      queueMicrotask(() => {
-        inputRef.current?.focus()
-      })
+      
+      if (isFocusedOnPopoverClose) {
+        queueMicrotask(() => {
+          inputRef.current?.focus()
+        })
+      }
     }
 
     const handleBlur = (
